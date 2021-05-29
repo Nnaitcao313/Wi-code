@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wi-Code</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_home.css') }}" type="text/css">
+
+    <link rel="icon" type="img/png" href="{{url_for('static', filename='logo.png')}}">
+
+</head>
+<header>
+    <div class="index">
+        <button type="button" class="collapsible" id="productos">Productos</button>
+        <div class="content" id="at">
+            <ul style="padding-left: 20px">
+                <a href="{{url_for('an_ms')}}">
+                    <li id="at_">Witrap-Ms</li>
+                </a>
+                <a href="{{url_for('an_cr')}}">
+                    <li id="at_">Witraps-Cr</li>
+                </a>
+                <a href="{{url_for('an_xx')}}">
+                    <li id="at_">Witrap-XX</li>
+                </a>
+            </ul>
+        </div>
+        
+
+        <div class="logo">
+            <a href="{{url_for('home')}}">
+                <img src="{{url_for('static', filename='logo.png')}}" type="image/png" alt="" width="25px" height="25px">
+            </a>
+        </div>
+
+        <div class="about_box">
+            <a href="{{url_for('about')}}" class="about">
+                <p id="about_us">Nuestro</p>
+                <p id="about_us">Equipo</p>
+            </a>
+        </div>
+        
+        <button type="button" class="collapsible" id="perfil">Mi perfil</button>
+        <div class="content" id="ab">
+            <ul id="p_elementos" style="padding-left: 20px">
+                <a href="{{url_for('products')}}">
+                    <li id="ab_">Mis productos</li>
+                </a>
+                
+                <a href="{{url_for('carrito')}}">
+                    <li id="ab_">Carrito</li>
+                </a>
+                
+                <a href="{{url_for('cuenta')}}">
+                    <li id="ab_">Cuenta</li>
+                </a>
+                
+            </ul>
+        </div>
+        <div class="contact_box">
+            <a href="{{url_for('contact')}}" class="contact">
+                <p id="ctact">Contáctenos</p>
+            </a>
+        </div>
+        <div class="proyectos_box">
+            <a href="{{url_for('projects')}}" class="proyectos">
+                <p id="pyectos">Proyectos</p>
+            </a>
+        </div>
+        <div class="blog_box">
+            <a href="{{url_for('blog')}}" class="blog">
+                <p id="blg">Blog</p>
+            </a>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="ventana_lema">
+        <img src="{{url_for('static',filename='lema_test.png')}}" class="lema_fondo">
+        <h1 class="titulo_lema">Wi-Code</h1>
+        <h3 class="pos_lema">Diseñados solo para ti</h3>
+    </div>
+    
+    <div class="ventana_atrapanieblas">
+        <a href="{{url_for('an_xx')}}">
+            <div class="A_" id="a_1">
+                <img src="{{url_for('static', filename= 'xx_4.png')}}" class="a_fondo" width="40%" height="400px" id="f_xx">
+                <div class="desc">
+                    <h1 class="modelo">Witrap-Xx</h1>
+                    <h2 class="descripcion">La mejor versión del momento</h2>
+                    <h3 class="disponibilidad">Ahora disponible</h3>
+                    <h4 class="lee" id="l_a1">Lee más ></h4>
+                    <h4 class="ordena" id="o_a1">Ordena ></h4>
+                </div>
+            </div>
+        </a>
+        
+        <a href="{{url_for('an_ms')}}">
+            <div class="A_" id="a_2">
+                <img src="{{url_for('static',filename= 'ms_2.png')}}" class="a_fondo" width="40%" height="400px" id="f_ms">
+                <div class="desc">
+                    <h1 class="modelo" id="m_2" >Witrap-Ms</h1>
+                    <h2 class="descripcion" id="d_2" >Agua más accecible que nunca</h2>
+                    <h3 class="disponibilidad">Ahora disponible</h3>
+                    <h4 class="lee" id="l_a2">Lee más ></h4>
+                    <h4 class="ordena" id="o_a2">Ordena ></h4>
+                </div>
+            </div>
+        </a>
+
+        <div class="doble">
+            <a href="{{url_for('an_cr')}}" class="doble_" id="db_1">
+                <div class="b_" id="a_3">
+                    <img src="{{url_for('static',filename= 'cr_2.png')}}" class="b_fondo">
+                    <h1 class="b_modelo">Witrap-Cr</h1>
+                    <h4 class="b_lee">Lee más ></h4>
+                    <h4 class="b_ordena">Ordena ></h4>
+                </div>
+            </a>
+            <a href="{{url_for('an_xx')}}" class="db_2">
+                <div class="b_" id="a_4">
+                    <img src="{{url_for('static',filename= 'jun_5.png')}}" class="b_fondo">
+                    <h1 class="b_modelo">Witrap-Huerta</h1>
+                    <h4 class="b_lee" id="b_leeH">Lee más ></h4>
+                </div>
+                
+            </a>
+        </div>
+    </div>
+
+
+    <div class="ventana_mision">
+        <div class="v_m">
+            <h1 class="m_titulo">Nuestra Misión</h1>
+            <img sr="{{url_for('static', filename='test_fondo4.jpg')}}" class="mision_lateral">
+            <div class="m_resumen">
+                <p>Existe una pasión dentro de cada uno de nosotros, una llama que nos motiva a seguir adelante. La creatividad y el asombro que ha inspirado la tecnología es lo que nos motiva a innovar y crear un nuevo futuro.
+                </p>
+            </div>
+            <div class="m_completo">
+                <p>Es esta llama la que hace que podamos traer la mejor calidad al mejor precio. Cómo empresa tenemos una única misión: crear soluciones simples con los mejores productos, diseñados para todos.
+                </p>
+                <p>Son los detalles y la atención que le damos a cada situación lo que nos diferencia. Todos los obstáculos se pueden sobrepasar, de eso estamos seguros.
+                </p>
+            </div>
+            <a href="{{url_for('mision')}}" id="l_m">
+                <h4>Lee más ></h4>
+            </a>
+        </div>
+    </div>
+    <div class="ventana_equipo">
+        <h1 class="e_titulo">Conozca Nuestro equipo</h1>
+        <img src="{{url_for('static', filename='mora.jpg')}}" id="f_mora">
+        <div class="persona" id="mora">
+            <img src="" alt="">
+            <h2 class="nombre">Jeronimmo Morales</h2>
+            <h3 class="titulo">Director Ejecutivo</h3>
+            <h4 class="resumen">Resumen:</h4>
+            <p class="r_texto">Jeronimo Morales trabaja principalmente en la investigación sobre el cliente y la competencia de la empresa...</p>
+        </div>
+
+        <img src="{{url_for('static', filename='lucho.jpeg')}}" id="f_lucho">
+        <div class="persona" id="lucho">
+            <h2 class="nombre">Luis Alberto Pinilla</h2>
+            <h3 class="titulo">Jefe de Operaciones</h3>
+            <h4 class="resumen">Resumen:</h4>
+            <p class="r_texto">Luis Alberto Pinilla hace la investigación y el diseño de nuestros productos, se encarga de toda el area de viabilidad del producto...</p>
+        </div>
+
+        <img src="{{url_for('static', filename='prada.jpeg')}}" id="f_prada">
+        <div class="persona" id="prada">
+            <img src="" alt="">
+            <h2 class="nombre">Nicolás Prada</h2>
+            <h3 class="titulo">Director de Tecnología</h3>
+            <h4 class="resumen">Resumen:</h4>
+            <p class="r_texto">Nicolás Prada trabaja principalmente en el area de desarrollo de software y hardware. Supervisa y maneja la recolección de datos de los atrapa nieblas...</p>
+        </div>
+
+        <a href="{{url_for('about')}}" id="l_e">
+            <h4>Lee más ></h4>
+        </a>
+    </div>
+
+    <div class="ventana_pie">
+        <img src="{{url_for('static', filename='logo.png')}}" class="" id="logo_pie">
+        <h1 id="titulo_pie">Wi-Code</h1>
+    </div>
+    
+</body>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
+</html>

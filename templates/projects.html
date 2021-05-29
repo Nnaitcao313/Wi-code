@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wi-Code</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_projects.css') }}" type="text/css">
+
+    <link rel="icon" type="img/png" href="{{url_for('static', filename='logo.png')}}">
+</head>
+<header>
+    <div class="index">
+        <button type="button" class="collapsible" id="productos">Productos</button>
+        <div class="content" id="at">
+            <ul style="padding-left: 20px">
+                <a href="{{url_for('an_ms')}}">
+                    <li id="at_">Witrap-Ms</li>
+                </a>
+                <a href="{{url_for('an_cr')}}">
+                    <li id="at_">Witraps-Cr</li>
+                </a>
+                <a href="{{url_for('an_xx')}}">
+                    <li id="at_">Witrap-XX</li>
+                </a>
+            </ul>
+        </div>
+        
+
+        <div class="logo">
+            <a href="{{url_for('home')}}">
+                <img src="{{url_for('static', filename='logo.png')}}" type="image/png" alt="" width="25px" height="25px">
+            </a>
+        </div>
+
+        <div class="about_box">
+            <a href="{{url_for('about')}}" class="about">
+                <p id="about_us">Nuestro</p>
+                <p id="about_us">Equipo</p>
+            </a>
+        </div>
+        
+        <button type="button" class="collapsible" id="perfil">Mi perfil</button>
+        <div class="content" id="ab">
+            <ul id="p_elementos" style="padding-left: 20px">
+                <a href="{{url_for('products')}}">
+                    <li id="ab_">Mis productos</li>
+                </a>
+                
+                <a href="{{url_for('carrito')}}">
+                    <li id="ab_">Carrito</li>
+                </a>
+                
+                <a href="{{url_for('cuenta')}}">
+                    <li id="ab_">Cuenta</li>
+                </a>
+                
+            </ul>
+        </div>
+        <div class="contact_box">
+            <a href="{{url_for('contact')}}" class="contact">
+                <p id="ctact">Contáctenos</p>
+            </a>
+        </div>
+        <div class="proyectos_box">
+            <a href="{{url_for('projects')}}" class="proyectos">
+                <p id="pyectos">Proyectos</p>
+            </a>
+        </div>
+        <div class="blog_box">
+            <a href="{{url_for('blog')}}" class="blog">
+                <p id="blg">Blog</p>
+            </a>
+        </div>
+    </div>
+</header>
+<body>
+  <div class="ventana_jun">
+      <div class="jun_parte" id="j_lema">
+            <div class="j_texto" id="texto_lema">
+                <h1 id="t_lema">Proyecto Huerta Alcaparros</h1>
+            </div>
+            <div class="j_imagen" id="foto_lema">
+                <img src="{{url_for('static',filename='jun_5.png')}}" id="f_lema" class="imagen_">
+            </div>
+      </div>
+      <div class="jun_parte" id="j_resumen">
+            <div class="j_texto" id="texto_resumen">
+                <h3 id="t_resumen">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore tempora doloribus accusantium vero iure, voluptatibus fuga tenetur, error blanditiis odio hic libero nobis alias. Officiis tempora quos fugit nisi nostrum?
+                </h3>
+            </div>
+            <div class="j_imagen" id="foto_resumen">
+                <img src="{{url_for('static',filename='jun_1.png')}}" id="f_resumen" class="imagen_">
+            </div>
+      </div>
+      <div class="jun_parte" id="j_cuerpo">
+        <div class="j_texto" id="texto_cuerpo">
+            <h3 id="t_cuerpo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore tempora doloribus accusantium vero iure, voluptatibus fuga tenetur, error blanditiis odio hic libero nobis alias. Officiis tempora quos fugit nisi nostrum?
+            </h3>
+        </div>
+        <div class="j_imagen" id="foto_cuerpo1">
+            <img src="{{url_for('static',filename='jun_2.png')}}" id="f_cuerpo1" class="imagen_">
+        </div>
+        <div class="j_imgen" id="foto_cuerpo2">
+            <img src="{{url_for('static',filename='jun_3.png')}}" id="f_cuerpo2" class="imagen_">
+        </div>
+      </div>
+      <div class="jun_parte" id="j_detalles">
+        <div class="j_texto" id="texto_detalles">
+            <h3 id="t_detalles">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore tempora doloribus accusantium vero iure, voluptatibus fuga tenetur, error blanditiis odio hic libero nobis alias. Officiis tempora quos fugit nisi nostrum?
+            </h3>
+        </div>
+        <div class="j_imagen" id="foto_detalles">
+            <img src="{{url_for('static',filename='jun_4.png')}}" id="f_detalles" class="imagen_">
+        </div>
+      </div>
+  </div>
+
+  <div class="ventana_pie">
+    <img src="{{url_for('static', filename='logo.png')}}" class="" id="logo_pie">
+    <h1 id="titulo_pie">Wi-Code</h1>
+</div>
+    
+</body>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
+</html>

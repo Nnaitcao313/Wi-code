@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+
+     <!--Custom Stylsheet-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='') }}" type="text/css">
+
+    <link rel="icon" type="img/png" href="{{url_for('static', filename='')}}">
+
+
+</head>
+<body>
+
+    <h1>Request of information</h1>
+
+    <form action="/datos">
+        <select name="time" id="time">
+            <option value="" selected="tipo">tipo...</option>
+            <option value="Año">Año</option>
+            <option value="Mes">Mes</option>
+            <option value="Día">Día</option>
+        </select>
+        <input type="date" id="date" name="date" class="date">
+        <input type="submit">
+    </form>
+
+    
+    
+</body>
+</html>

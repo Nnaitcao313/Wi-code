@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wi-Code</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_about.css') }}" type="text/css">
+
+    <link rel="icon" type="img/png" href="{{url_for('static', filename='logo.png')}}">
+</head>
+<header>
+    <div class="index">
+        <button type="button" class="collapsible" id="productos">Productos</button>
+        <div class="content" id="at">
+            <ul style="padding-left: 20px">
+                <a href="{{url_for('an_ms')}}">
+                    <li id="at_">Witrap-Ms</li>
+                </a>
+                <a href="{{url_for('an_cr')}}">
+                    <li id="at_">Witraps-Cr</li>
+                </a>
+                <a href="{{url_for('an_xx')}}">
+                    <li id="at_">Witrap-XX</li>
+                </a>
+            </ul>
+        </div>
+        
+
+        <div class="logo">
+            <a href="{{url_for('home')}}">
+                <img src="{{url_for('static', filename='logo.png')}}" type="image/png" alt="" width="25px" height="25px">
+            </a>
+        </div>
+
+        <div class="about_box">
+            <a href="{{url_for('about')}}" class="about">
+                <p id="about_us">Nuestro</p>
+                <p id="about_us">Equipo</p>
+            </a>
+        </div>
+        
+        <button type="button" class="collapsible" id="perfil">Mi perfil</button>
+        <div class="content" id="ab">
+            <ul id="p_elementos" style="padding-left: 20px">
+                <a href="{{url_for('products')}}">
+                    <li id="ab_">Mis productos</li>
+                </a>
+                
+                <a href="{{url_for('carrito')}}">
+                    <li id="ab_">Carrito</li>
+                </a>
+                
+                <a href="{{url_for('cuenta')}}">
+                    <li id="ab_">Cuenta</li>
+                </a>
+                
+            </ul>
+        </div>
+        <div class="contact_box">
+            <a href="{{url_for('contact')}}" class="contact">
+                <p id="ctact">Contáctenos</p>
+            </a>
+        </div>
+        <div class="proyectos_box">
+            <a href="{{url_for('projects')}}" class="proyectos">
+                <p id="pyectos">Proyectos</p>
+            </a>
+        </div>
+        <div class="blog_box">
+            <a href="{{url_for('blog')}}" class="blog">
+                <p id="blg">Blog</p>
+            </a>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="principal">
+
+        <div class="marco" id="mmora">
+            <h2 class="nombre">Jeronimo Morales</h2>
+           <img src="{{url_for('static', filename='mora.jpg')}}" id="f_mora" class="foto"> 
+        </div>
+        
+        <div class="info" id="imora">
+            <h3 class="titulo">Director Ejecutivo</h3>
+            <div class="caracter">
+                <p>Jeronimo Morales trabaja principalmente en la investigación sobre el cliente y la competencia de la empresa.</p>
+                <p>Jeronimo maneja la investigación sobre la demanda que puedan presentar nuestros productos, asegurandose de ver las necesidades del consumidor y la competencia del producto.</p>
+            </div>    
+        </div>
+
+        <div class="marco" id="mlucho">
+            <h2 class="nombre">Luis Alberto Pinilla</h2>
+            <img src="{{url_for('static', filename='lucho.jpeg')}}" id="f_lucho" class="foto">
+        </div>
+
+        <div class="info" id="ilucho">
+            <h3 class="titulo" id="t_lucho">Jefe de Operaciones</h3>
+            <div class="caracter">
+                <p>Luis Alberto Pinilla hace la investigación y el diseño de nuestros productos, se encarga de toda el area de viabilidad del producto.</p>
+                <p>Luis está encargado de ver si las ideas y los productos que planeamos introducir al mercado son viables para nuestra empresa. A su vez, es la cabeza principal del area de hardware y es el diseñador de todos nuestros modelos de atrapa nieblas.</p>
+            </div>
+        </div>
+
+        <div class="marco" id="mprada">
+            <h2 class="nombre">Nicolás Prada</h2>
+            <img src="{{url_for('static', filename='prada.jpeg')}}" id="f_lucho" class="foto">
+        </div>
+
+        <div class="info" id="iprada">
+            <h3 class="titulo">Director de Tecnología</h3>
+            <div class="caracter">
+                <p>Nicolás Prada trabaja principalmente en el area de desarrollo de software y hardware. Pese a que Luis Alberto Pinilla es el principal desarrollador de hardware y diseños de nuestros productos, Nicolás trabaja en la implementación de placas y sensores para los atrapa nieblas.</p>
+                <p>Nicolas supervisa y maneja la recolección de datos de los atrapa nieblas, la interacción entre el cliente y su producto y la pagina web de la empresa.</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="ventana_pie">
+        <img src="{{url_for('static', filename='logo.png')}}" class="" id="logo_pie">
+        <h1 id="titulo_pie">Wi-Code</h1>
+    </div>
+</body>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
+</html>

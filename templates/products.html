@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wi-Code</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_products.css') }}" type="text/css">
+
+    <link rel="icon" type="img/png" href="{{url_for('static', filename='logo.png')}}">
+</head>
+<header>
+    <div class="index">
+        <button type="button" class="collapsible" id="productos">Productos</button>
+        <div class="content" id="at">
+            <ul style="padding-left: 20px">
+                <a href="{{url_for('an_ms')}}">
+                    <li id="at_">Witrap-Ms</li>
+                </a>
+                <a href="{{url_for('an_cr')}}">
+                    <li id="at_">Witraps-Cr</li>
+                </a>
+                <a href="{{url_for('an_xx')}}">
+                    <li id="at_">Witrap-XX</li>
+                </a>
+            </ul>
+        </div>
+        
+
+        <div class="logo">
+            <a href="{{url_for('home')}}">
+                <img src="{{url_for('static', filename='logo.png')}}" type="image/png" alt="" width="25px" height="25px">
+            </a>
+        </div>
+
+        <div class="about_box">
+            <a href="{{url_for('about')}}" class="about">
+                <p id="about_us">Nuestro</p>
+                <p id="about_us">Equipo</p>
+            </a>
+        </div>
+        
+        <button type="button" class="collapsible" id="perfil">Mi perfil</button>
+        <div class="content" id="ab">
+            <ul id="p_elementos" style="padding-left: 20px">
+                <a href="{{url_for('products')}}">
+                    <li id="ab_">Mis productos</li>
+                </a>
+                
+                <a href="{{url_for('carrito')}}">
+                    <li id="ab_">Carrito</li>
+                </a>
+                
+                <a href="{{url_for('cuenta')}}">
+                    <li id="ab_">Cuenta</li>
+                </a>
+                
+            </ul>
+        </div>
+        <div class="contact_box">
+            <a href="{{url_for('contact')}}" class="contact">
+                <p id="ctact">Contáctenos</p>
+            </a>
+        </div>
+        <div class="proyectos_box">
+            <a href="{{url_for('projects')}}" class="proyectos">
+                <p id="pyectos">Proyectos</p>
+            </a>
+        </div>
+        <div class="blog_box">
+            <a href="{{url_for('blog')}}" class="blog">
+                <p id="blg">Blog</p>
+            </a>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="ventana_productos">
+        <div class="pr_atrapa" id="pr_an1">
+            <div class="pr_detalles">
+                <h3 class="pr_status">Estado: "activado"</h3>
+                <h3 class="pr_modelo">Witrap-Ms</h3>
+                <div class="pr_actual">
+                    <h4 class="pr_dtitulo">Datos Actuales-</h4>
+                    <ul class="pr_datos">
+                        <li>{{dato1}}%</li>
+                        <li>{{dato2}}%</li>
+                        <li>{{dato3}}%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pr_foto">
+                <img src="{{url_for('static', filename='witrap_ms.jpeg')}}" class="foto_" id="f_an1">
+            </div>
+            <div class="pr_links">
+                <a href="{{url_for('req')}}" class="pr_info">
+                    <h4 class="pr_info">Info</h4>
+                </a>
+                <a href="{{url_for('an_ms')}}" class="pr_leer">
+                    <h4 class="pr_leer">Leer más</h4>
+                </a>
+            </div>
+        </div>
+
+        <div class="pr_atrapa" id="pr_an2">
+            <div class="pr_detalles">
+                <h3 class="pr_status">Estado: "apagado"</h3>
+                <h3 class="pr_modelo">Witrap-Xx</h3>
+                <div class="pr_actual">
+                    <h4 class="pr_dtitulo">Datos Actuales-</h4>
+                    <ul class="pr_datos">
+                        <li>NO HAY DATOS</li>
+                        <li>NO HAY DATOS</li>
+                        <li>NO HAY DATOS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pr_foto">
+                <img src="{{url_for('static', filename='witrap_zc.jpeg')}}" class="foto_" id="f_an2">
+            </div>
+            <div class="pr_links">
+                <a href="" class="pr_info">
+                    <h4 class="pr_info">Info</h4>
+                </a>
+                <a href="{{url_for('an_Xx')}}" class="pr_leer">
+                    <h4 class="pr_leer">Leer más</h4>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="ventana_pie">
+        <img src="{{url_for('static', filename='logo.png')}}" class="" id="logo_pie">
+        <h1 id="titulo_pie">Wi-Code</h1>
+    </div>
+    
+</body>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+</script>
+</html>
